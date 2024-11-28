@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -11,4 +12,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'marufloreria';
+
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('es');
+  }
 }
